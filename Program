@@ -1,0 +1,68 @@
+using System;
+
+namespace DGD203_HasanMücahitÖzkan_TreasureIsland
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            GameManager gameManager = new GameManager();
+
+            Movement _movement = new Movement();
+
+            gameManager.movement = _movement;
+
+            bool isGameOn = true;
+
+            while (isGameOn)
+            {
+                bool isOnMenu = true;
+                while (isOnMenu)
+                {
+                    Console.WriteLine("1) New Game");
+                    Console.WriteLine("2) Credits");
+                    Console.WriteLine("Type the number");
+                    string answer = Console.ReadLine();
+                    if (answer == "1")
+                    {
+                        Console.WriteLine("Entering new game.");
+                        isOnMenu = false;
+                    }
+                    else if (answer == "2")
+                    {
+                        Console.WriteLine("Hasan Mücahit Özkan, thanks to the help of our savior ChatGPT.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect input.");
+                    }
+                }
+                bool newGame = true;
+
+                Console.WriteLine("You are at Treasure Island.");
+                Console.WriteLine("Move around typing north, south, east,west.");
+                Console.WriteLine("Type look to look at the surroundings of you.");
+                Console.WriteLine("Type position to learn your current position.");
+                Console.WriteLine("Type actions to learn inputs.");
+                while (newGame)
+                {
+
+                    Console.WriteLine("Type your action: ");
+
+                    string currentAction = Console.ReadLine();
+
+                    gameManager.GameActions(currentAction);
+
+                    if (_movement.GameEnder())
+                    {
+                        newGame = false;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
