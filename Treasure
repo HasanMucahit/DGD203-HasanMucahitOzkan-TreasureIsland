@@ -1,0 +1,64 @@
+using System;
+
+namespace DGD203_HasanMücahitÖzkan_TreasureIsland
+{
+    internal class Treasure
+    {
+
+        public void Final()
+        {
+
+            Console.WriteLine("Your crew suddenly started to yell and jump happily.");
+            Console.WriteLine("When you come near them you understood why they are yelling.");
+            Console.WriteLine("There was a huge chest in the middle of the beach.");
+            Console.WriteLine("Golds were like sands in the beach.");
+
+            bool finalQuestion = true;
+
+            while (finalQuestion)
+            {
+
+                Console.WriteLine("");
+                Console.WriteLine("What you should do?");
+                Console.WriteLine("1 ) Captain must have the treasure alone.");
+                Console.WriteLine("2 ) Lets share the treasure.");
+                Console.WriteLine("");
+                string answer = Console.ReadLine();
+                if (answer == "1")
+                {
+                    Console.WriteLine("You suddenly attacked the pirate near you.");
+                    Console.WriteLine("Now there were 3 crew member left.");
+                    Console.WriteLine("Your co-captain took out his gun and shot the other members.");
+                    Console.WriteLine("He pointed the gun at you but he failed to shoot vital organs.");
+                    Console.WriteLine("You runned to him and you started wrestling.");
+                    Console.WriteLine("After a long battle you pinned him down and crushed his skull with stone.");
+                    Console.WriteLine("When you try to get up you realized you were bleeding all over.");
+                    Console.WriteLine("");
+                    Console.WriteLine("You sat next to the treasure and started waiting for death.");
+                    finalQuestion = false;
+
+                }
+                else if (answer == "2")
+                {
+                    Console.WriteLine("You all sat next to the treasure.");
+                    Console.WriteLine("Everyone was looking at eachother but no one made a move.");
+                    Console.WriteLine("There is more than enough treasure for everyone here you said.");
+                    Console.WriteLine("And suddenly a pirate dream came true.");
+                    Console.WriteLine("Everyone carried the treasure to the ship.");
+                    Console.WriteLine("And sailed to the horizon.");
+                    finalQuestion = false;
+                }
+
+                else
+                {
+                    Console.WriteLine("Invalid Command!!!!!!!!!!");
+                }
+                Console.WriteLine("Press enter to return to main menu.");
+                Console.ReadLine();
+            }
+
+        }
+
+
+    }
+}
