@@ -1,0 +1,58 @@
+using System;
+
+namespace DGD203_HasanMücahitÖzkan_TreasureIsland
+{
+    internal class Parrot
+    {
+
+        public void ParrotDialogue()
+        {
+            Console.WriteLine("Suddenly you have come across an opening in middle of woods.");
+            Console.WriteLine("There is a huge parrot in the middle sitting on the branch.");
+            Console.WriteLine("Caaaaaawk! Caaaaaawk! Caaaawk!");
+            Console.WriteLine("Hello stranger.");
+
+
+
+
+            bool isQuestion1Answered = true;
+
+            while (isQuestion1Answered)
+            {
+                Console.WriteLine("It's been a long time since I have seen human.");
+                Console.WriteLine("1 ) How can you talk?");
+                Console.WriteLine("2 ) Who did you saw last time?");
+                string answer1 = Console.ReadLine();
+
+
+                if (answer1 == "1")
+                {
+                    Console.WriteLine("I use to know a guy who knows a guy that taught me talking.");
+                    Console.WriteLine("He use to be the owner of this island.");
+                    isQuestion1Answered = false;
+                }
+                else if (answer1 == "2")
+                {
+                    Console.WriteLine("A crew just like you.");
+                    Console.WriteLine("They came here for treasure but they all got lost in this island.");
+                    isQuestion1Answered = false;
+                }
+                else
+                {
+                    Console.WriteLine("Whaaaaat human? Say it again.");
+                }
+            }
+            Console.WriteLine("Press enter to continue");
+            Console.ReadLine();
+
+            Console.WriteLine("We heard that there is a treasure here.");
+            Console.WriteLine("Do you know where it is?");
+
+            Console.WriteLine("");
+            Console.WriteLine("Caaaawk! You guys are gonna get lost too.");
+            Console.WriteLine("But I will still give you the coordinates.");
+            Console.WriteLine("Go east, then go north.");
+
+        }
+    }
+}
