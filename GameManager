@@ -1,0 +1,42 @@
+using System;
+
+namespace DGD203_HasanMücahitÖzkan_TreasureIsland
+{
+    internal class GameManager
+    {
+
+
+        Look look = new Look();
+
+        public Movement movement;
+
+        public void GameActions(string currentAction)
+        {
+            if (currentAction == "look")
+            {
+                //Needs look class
+                look.LookAround(movement.xPosition, movement.yPosition);
+            }
+            else if (currentAction == "position")
+            {
+                //Needs look position class
+
+                Console.WriteLine("Your position is " + movement.CurrentPosition());
+            }
+            else if (currentAction == "north" || currentAction == "south" || currentAction == "east" || currentAction == "west")
+            {
+                //Needs movement class
+                movement.Move(currentAction);
+            }
+            else if (currentAction == "actions")
+            {
+                Console.WriteLine("look, position, actions, north, south, east, west");
+            }
+            else
+            {
+                Console.WriteLine("Invalid action!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            }
+        }
+
+    }
+}
