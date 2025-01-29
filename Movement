@@ -1,0 +1,94 @@
+using System;
+
+namespace DGD203_HasanMücahitÖzkan_TreasureIsland
+{
+    internal class Movement
+    {
+
+        Treasure treasure = new Treasure();
+
+        public int xPosition = 1;
+        public int yPosition = 1;
+
+        bool isGameEnded = false;
+
+        public string CurrentPosition()
+        {
+            string position = xPosition.ToString() + ", " + yPosition.ToString();
+
+            return position;
+        }
+
+
+        public void Move(string direction)
+        {
+            if (direction == "north")
+            {
+                if (yPosition != 3)
+                {
+                    yPosition++;
+                    Console.WriteLine("One step further.");
+                }
+                else if (yPosition == 3 && xPosition == 2)
+                {
+                    treasure.Final();
+                    isGameEnded = true;
+
+                }
+                else
+                {
+                    Console.WriteLine("You can't leave the island.");
+                }
+            }
+            else if (direction == "south")
+            {
+                if (yPosition != 1)
+                {
+                    yPosition--;
+                    Console.WriteLine("One step backwards.");
+                }
+                else
+                {
+                    Console.WriteLine("You can't leave the island.");
+                }
+            }
+            else if (direction == "east")
+            {
+                if (xPosition != 3)
+                {
+                    xPosition++;
+                    Console.WriteLine("One step left.");
+                }
+                else
+                {
+                    Console.WriteLine("You can't leave the island.");
+                }
+            }
+            else if (direction == "west")
+            {
+                if (xPosition != 1)
+                {
+                    xPosition--;
+                    Console.WriteLine("One step right.");
+                }
+                else
+                {
+                    Console.WriteLine("You can't leave the island.");
+                }
+            }
+        }
+
+       public bool GameEnder()
+        {
+            if(isGameEnded==true)
+            {
+                isGameEnded = false;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+}
