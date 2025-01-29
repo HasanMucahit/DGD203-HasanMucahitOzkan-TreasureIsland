@@ -1,0 +1,61 @@
+using System;
+using System.Runtime.InteropServices;
+
+namespace DGD203_HasanMücahitÖzkan_TreasureIsland
+{
+    internal class Look
+    {
+
+        Parrot parrot = new Parrot();
+
+        
+        public void LookAround(int xPos, int yPos)
+        {
+            if (xPos == 1 && yPos == 1)
+            {
+                Console.WriteLine("You and your crew standing next to your ship.");
+                Console.WriteLine("Who knows what this unknown journey would bring.");
+            }
+            else if (xPos == 1 && yPos == 2)
+            {
+                
+                Console.WriteLine("It looks like forest starts here.");
+                Console.WriteLine("Gorillaz are dancing in the forest.");
+            }
+            else if (xPos == 1 && yPos == 3)
+            {
+                parrot.ParrotDialogue();
+            }
+            else if (xPos == 2 && yPos == 1)
+            {
+                Console.WriteLine("Mountain was hard to climb but the wiev is worth it.");
+                Console.WriteLine("It seems like there is something in the north.");
+            }
+            else if (xPos == 2 && yPos == 2)
+            {
+                Console.WriteLine("You have found a map.");
+                Console.WriteLine("It says first go north than west to trace the treasure.");
+            }
+            else if (xPos == 2 && yPos == 3)
+            {
+                Console.WriteLine("Green is all over the forest.");
+                Console.WriteLine("You can see the green even if you close your eyes.");
+            }
+            else if (xPos == 3 && yPos == 1)
+            {
+                Console.WriteLine("Standing so close to the cliff was not a smart choice.");
+                Console.WriteLine("That scream will never go away from your ear.");
+            }
+            else if (xPos == 3 && yPos == 2)
+            {
+                Console.WriteLine("The beach.");
+                Console.WriteLine("Everything is so calm from here.");        
+            }
+            else if (xPos == 3 && yPos == 3)
+            {
+                Console.WriteLine("You have found a skeleton with a note on it.");
+                Console.WriteLine("Real treasure was the friends we made along the way.");
+            }
+        }        
+    }
+}
